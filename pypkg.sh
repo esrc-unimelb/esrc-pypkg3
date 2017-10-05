@@ -7,7 +7,8 @@ VERSION="2.7.3"
 PKGS="distribute beaker bleach formencode mongokit pymongo psycopg2 sqlalchemy \
 waitress cryptacular gunicorn pyramid pyramid_beaker pyramid_debugtoolbar \
 pyramid_simpleform pyramid_tm python-ldap webhelpers lxml nose nose-cov \
-nose-progressive rednose nose_fixes argparse python-magic httplib2 pyyaml pillow"
+nose-progressive rednose nose_fixes argparse python-magic httplib2 pyyaml pillow \
+requests[security]"
 
 build_python() {
     wget http://www.python.org/ftp/python/${VERSION}/Python-${VERSION}.tgz
@@ -31,7 +32,8 @@ install_the_installer() {
 install_deps() {
     sudo aptitude install build-essential devscripts \
         postgresql-server-dev-9.1 libldap2-dev libxslt-dev libxml2-dev \
-        libjpeg-dev libfreetype6-dev liblcms2-dev libyaml-dev libncurses5-dev
+        libjpeg-dev libfreetype6-dev liblcms2-dev libyaml-dev libncurses5-dev \
+        libffi-dev libssl-dev
 }
 
 setup_base() {

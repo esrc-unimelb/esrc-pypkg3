@@ -1,7 +1,7 @@
 pypkg
 =====
 
-A helper to create a custom, relocatable python
+A helper to create a custom, relocatable python 3
 
 
 Invocation

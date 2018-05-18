@@ -12,10 +12,10 @@ csvkit beautifulsoup4 networkx pymongo gunicorn zope.sqlalchemy msgpack ujson re
 
 build_python() {
     wget http://www.python.org/ftp/python/${VERSION}/Python-${VERSION}.tgz
-    tar -zxvf Python-${VERSION}.tgz 
+    tar -zxvf Python-${VERSION}.tgz
     cd Python-${VERSION}/
     ./configure --prefix=${DEST}
-    make -j4 
+    make -j4
     make install
 }
 
@@ -40,7 +40,8 @@ setup_base() {
 }
 
 install_the_pkgs() {
-    for pkg in $PKGS ; do
+	${DEST}/bin/pip3 install --upgrade pip
+	for pkg in $PKGS ; do
         ${DEST}/bin/pip3 install $pkg
     done
 }

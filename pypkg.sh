@@ -8,7 +8,7 @@ PKGS="distribute beaker bleach formencode mongokit pymongo psycopg2 sqlalchemy \
 waitress cryptacular gunicorn pyramid pyramid_beaker pyramid_debugtoolbar \
 pyramid_simpleform pyramid_tm python-ldap webhelpers lxml nose nose-cov \
 nose-progressive rednose nose_fixes argparse python-magic httplib2 pyyaml pillow
-csvkit beautifulsoup4 networkx pymongo gunicorn zope.sqlalchemy msgpack ujson requests[security]"
+csvkit beautifulsoup4 networkx pymongo zope.sqlalchemy msgpack ujson requests[security]"
 
 build_python() {
     wget http://www.python.org/ftp/python/${VERSION}/Python-${VERSION}.tgz
